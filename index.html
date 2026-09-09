@@ -160,45 +160,62 @@
 
     <article class="case">
       <div class="case-head">
-        <h3>Inverter&ndash;generator synchronization</h3>
+        <h3>Hybrid inverter / generator oscillation</h3>
         <p class="client">Schneider Electric XW Pro · via HB Designs</p>
       </div>
       <div class="case-body">
-        <p>A generator-backed hybrid inverter system had a synchronization and control interaction that could go unstable under certain field conditions. I made it repeatable with HIL simulation and physical 20&nbsp;kW generator testing, then worked with the controls team to identify the mechanism and validate the re-tuned controller behaviour. The fix shipped in a certified firmware release.</p>
-        <p class="delta"><span class="delta-label">Generator switchover interruption</span><span class="delta-val">&gt;100 ms <span class="arrow">→</span> &lt;40 ms</span></p>
+        <p>A generator-backed hybrid inverter system had a field issue where the inverter and generator could get into an unstable interaction under certain operating conditions. The behavior was not isolated to one firmware function. It involved real-time firmware behavior, inverter synchronization, control loops, power electronics, and the generator's own voltage regulation.</p>
+        <p>The first step was to make the problem repeatable. Using Hardware-in-the-Loop simulation, I reproduced the behavior in a controlled environment and then validated it against a physical 20&nbsp;kW generator. Once the issue was repeatable, I worked with the controls team to understand the mechanism and validate the revised controller behavior.</p>
+        <p>The final result was a certified firmware fix for a real field issue on Schneider Electric's XW Pro hybrid inverter platform. This is the kind of embedded problem that does not fit neatly into "firmware" or "hardware." The useful work was making the failure reproducible, understanding the system interaction, and proving the fix under realistic conditions.</p>
       </div>
     </article>
 
     <article class="case">
       <div class="case-head">
-        <h3>68K platform brought back into production</h3>
+        <h3>Generator transfer timing improvement</h3>
+        <p class="client">Schneider Electric XW Pro · via HB Designs</p>
+      </div>
+      <div class="case-body">
+        <p>A hybrid inverter system needed better transfer behavior during generator/inverter switching. The existing interruption was over 100&nbsp;ms, which was long enough to affect downstream equipment in some installations.</p>
+        <p>I worked on the firmware behavior around transfer timing and validation, including the interaction between firmware state machines, relay timing, synchronization behavior, and system-level power continuity. Small timing changes in embedded power systems can have large user-visible effects. This work required understanding firmware timing, power-system behavior, and how the product behaved outside ideal lab conditions.</p>
+        <p class="delta"><span class="delta-label">Transfer interruption</span><span class="delta-val">&gt;100 ms <span class="arrow">→</span> &lt;40 ms</span></p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Legacy 68K platform recovery</h3>
         <p class="client">OPI Systems</p>
       </div>
       <div class="case-body">
-        <p>Flash memory obsolescence forced a firmware change on a legacy 68K product. The development environment was decades old and unsupported, the compiler vendor was gone, and the bootloader source was missing. I rebuilt the toolchain, recovered the bootloader source and put it under version control, and automated manufacturing programming by combining bootloader and application into a single JTAG-programmable artifact.</p>
-        <p class="delta"><span class="delta-label">Production programming time</span><span class="delta-val">10&ndash;15 min <span class="arrow">→</span> &lt;1 min</span></p>
+        <p>A legacy embedded product based on a Motorola 68K-derived platform lost production capability after a flash-memory component became obsolete. The product was decades old, the original toolchain was unsupported, the compiler vendor was gone, and the bootloader source code had been lost.</p>
+        <p>I restored the development environment, recovered the bootloader source, brought it into version control, updated the firmware path, and automated the manufacturing programming process. The new flow combined the bootloader and application into a JTAG-programmable artifact. Not every embedded problem is greenfield development. Sometimes the product still needs to ship, the tools are gone, the parts changed, and nobody wants to touch the code.</p>
+        <p class="delta"><span class="delta-label">Production programming time</span><span class="delta-val">10–15 min <span class="arrow">→</span> &lt;1 min</span></p>
       </div>
     </article>
 
     <article class="case">
       <div class="case-head">
-        <h3>Robot localization and motion throughput</h3>
-        <p class="client">ATTAbotics</p>
-      </div>
-      <div class="case-body">
-        <p>Worked on optical localization correction using camera and fiducial tracking, sensor-based correction on legacy robots, Time-of-Flight sensor fault detection, and motion-profile optimization. Extending the useful life of the legacy fleet helped defer roughly $750K in capital expenditure.</p>
-        <p class="delta"><span class="delta-label">Presentation throughput, R&amp;D testing</span><span class="delta-val">&lt;3 <span class="arrow">→</span> 5.5 / min</span></p>
-      </div>
-    </article>
-
-    <article class="case">
-      <div class="case-head">
-        <h3>Wireless monitoring device field failures</h3>
+        <h3>Wireless monitoring field failures</h3>
         <p class="client">Wireless monitoring product</p>
       </div>
       <div class="case-body">
-        <p>Devices were dropping sessions unexpectedly in the field. Working with ST microcontroller firmware and Wi-Fi/Bluetooth module integration &mdash; including a Redpine to Silicon Labs SDK migration &mdash; I added diagnostic telemetry and flags to capture device state ahead of the failures.</p>
-        <p class="delta"><span class="delta-label">Root cause</span><span class="delta-val">Enclosure water intrusion, not firmware</span></p>
+        <p>A wireless monitoring product using an ST microcontroller and Wi-Fi/Bluetooth vendor module was experiencing field reliability issues, including sessions ending unexpectedly. At first, the issue looked like it could be firmware, wireless connectivity, or a vendor SDK problem.</p>
+        <p>I worked through firmware integration during a Redpine/Silicon Labs SDK transition and added diagnostic flags and telemetry so the device could report more useful state before failure. That changed the debugging process from guessing to evidence. The diagnostic data helped point the issue away from firmware and toward enclosure water intrusion in the field.</p>
+        <p>For connected devices, "it disconnected" is not enough information. Firmware needs enough observability to tell the difference between a software bug, a wireless problem, a power issue, a mechanical issue, or the environment destroying the product.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Robotics localization and motion debugging</h3>
+        <p class="client">ATTAbotics</p>
+      </div>
+      <div class="case-body">
+        <p>At ATTAbotics, robotic systems needed better localization correction, better fault detection, and higher motion throughput. The problems crossed firmware, controls, sensors, mechanics, and robot infrastructure.</p>
+        <p>I worked on optical localization correction using camera/fiducial tracking, sensor-based correction for legacy robots, Time-of-Flight sensor fault detection, and motion-profile optimization. Real robotic failures are often cross-domain. The fix may be in firmware, but the cause may involve mechanics, sensors, motor behavior, timing, or incorrect assumptions about the physical system.</p>
+        <p>The work improved robot behavior, extended the useful life of legacy robots, and helped defer approximately $750,000 in capital spending.</p>
+        <p class="delta"><span class="delta-label">Presentation throughput, R&amp;D testing</span><span class="delta-val">&lt;3 <span class="arrow">→</span> 5.5 / min</span></p>
       </div>
     </article>
 
@@ -208,7 +225,8 @@
         <p class="client">Acquired by Gerbing Heated Clothing</p>
       </div>
       <div class="case-body">
-        <p>A personal project that turned into a product: bare-metal PIC firmware, custom PCB, and a custom RF protocol on MAX7032 transceivers. The useful lesson was that a radio link needs real framing, timing, and protocol behaviour &mdash; not UART bytes pushed at an antenna. Gerbing reviewed the prototype and acquired the completed design and IP for production.</p>
+        <p>I designed a wireless heated-clothing controller originally for personal use. The system used bare-metal PIC firmware, a custom RF protocol, MAX7032 RF transceivers, and a production-ready PCB implementation. The first attempt was simple: send UART-like data into the radio. That quickly exposed why RF systems need proper framing, timing, preamble behavior, and protocol design.</p>
+        <p>I implemented the protocol in firmware and validated it against real RF hardware. Gerbing Heated Clothing later reviewed the prototype and acquired the completed design and associated IP for production deployment. This was a complete small embedded product: hardware, firmware, RF communication, PCB implementation, timing constraints, and product handoff.</p>
         <p class="delta"><span class="delta-label">Scope</span><span class="delta-val">Firmware, hardware, and RF protocol</span></p>
       </div>
     </article>
