@@ -1,0 +1,384 @@
+/* =========================================================================
+   ABRACADABRA GROUP | CSS (Light/Dark Theme Hybrid)
+   ========================================================================= */
+
+/* 1. Global Variables & Color Definitions */
+:root {
+    /* Baseline sizes */
+    --font-primary: 'Montserrat', sans-serif; /* Recommended, fallbacks in CSS */
+    --base-font-size: 18px;
+    --border-radius: 8px;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    
+    /* Transition speeds (very smooth) */
+    --transition-main: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2. Theme 1: Light Mode Colors (Professional, Trustworthy) */
+.theme-light {
+    --color-bg-body: #FFFFFF;
+    --color-bg-card: #F9FAFB;
+    --color-text-main: #1F2937; /* Very Dark Gray */
+    --color-text-sub: #4B5563; /* Mid Gray */
+    
+    --color-primary: #004A99; /* Deep Trustable Blue */
+    --color-cta: #0056B3; /* Slightly darker Blue */
+    --color-magic: #00BFFF; /* Electric Blue Spark */
+    --color-tel: #22C55E; /* Green for Call */
+    
+    --color-border: #E5E7EB;
+    --color-quote-bg: #F3F4F6;
+}
+
+/* 3. Theme 2: Dark Mode Colors (Premium, Sleek, "Night Magic") */
+.theme-dark {
+    --color-bg-body: #111827; /* Near Black Charcoal */
+    --color-bg-card: #1F2937; /* Dark Gray Card */
+    --color-text-main: #F9FAFB; /* Off White */
+    --color-text-sub: #D1D5DB; /* Light Gray */
+    
+    --color-primary: #FBBF24; /* Warm Gold */
+    --color-cta: #F59E0B; /* Rich Amber Gold */
+    --color-magic: #FFE08A; /* Pale Magic Spark */
+    --color-tel: #4ADE80; /* Brighter Green */
+    
+    --color-border: #374151;
+    --color-quote-bg: #111827;
+}
+
+/* 4. Global Styles (Reset/Normalize-esque) */
+html {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: var(--base-font-size);
+    scroll-behavior: smooth; /* Modern browser smooth scroll */
+}
+
+body {
+    background-color: var(--color-bg-body);
+    color: var(--color-text-main);
+    margin: 0;
+    transition: var(--transition-main);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-main);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 5. Components: Buttons */
+.cta-button, .cta-button-small, .tel-button {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: var(--color-cta);
+    color: #FFFFFF !important; /* Forces white on dark background */
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cta-button-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.cta-button-small:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg-body) !important;
+}
+
+.tel-button {
+    background-color: var(--color-tel);
+    color: #FFFFFF !important;
+}
+
+/* 6. Components: Logo */
+.logo-text {
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: -1px;
+    fill: url(#magicGradient); /* Uses the SVG gradient defined in HTML */
+}
+
+.logo-spark {
+    fill: var(--color-magic);
+}
+
+/* 7. Header */
+.main-header {
+    background-color: var(--color-bg-body);
+    padding: var(--space-sm) 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid var(--color-border);
+    transition: var(--transition-main);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav a {
+    margin-left: var(--space-md);
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+/* 8. Hero Section */
+.hero-section {
+    padding-top: 140px; /* Offset for fixed header */
+    padding-bottom: var(--space-lg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content .highlight {
+    color: var(--color-primary);
+}
+
+.hero-subtext {
+    font-size: 1.2rem;
+    color: var(--color-text-sub);
+    max-width: 600px;
+    margin: var(--space-sm) auto var(--space-md);
+}
+
+.hero-ctas a {
+    margin: 0 0.5rem;
+}
+
+/* 9. Services Section */
+.services-section {
+    padding: var(--space-lg) 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-text-sub);
+    max-width: 600px;
+    margin: var(--space-sm) auto var(--space-lg);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+}
+
+.service-card {
+    background-color: var(--color-bg-card);
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: var(--transition-main);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.icon-placeholder {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    color: var(--color-text-sub);
+    font-size: 1rem;
+    margin-bottom: var(--space-sm);
+    flex-grow: 1; /* Pushes the 'Explore' link to the bottom */
+}
+
+.card-link {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* 10. Quote Section (Flex layout) */
+.quote-section {
+    background-color: var(--color-quote-bg);
+    padding: var(--space-lg) 0;
+    transition: var(--transition-main);
+}
+
+.quote-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.quote-text {
+    flex: 1;
+}
+
+.quote-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.quote-text p {
+    color: var(--color-text-sub);
+    max-width: 400px;
+}
+
+.quote-form-area {
+    flex: 1;
+    background-color: var(--color-bg-body);
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.quote-form-area input, .quote-form-area select, .quote-form-area textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-bg-card);
+    color: var(--color-text-main);
+    box-sizing: border-box; /* Crucial for padding/width */
+    font-family: inherit; /* Inherit the main font */
+}
+
+.form-submit {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+}
+
+/* 11. Footer */
+.main-footer {
+    padding: var(--space-md) 0;
+    background-color: var(--color-bg-body);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-text-sub);
+}
+
+.footer-contact {
+    margin-top: 0.5rem;
+}
+
+.footer-contact a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* 12. Float Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: var(--space-md);
+    right: var(--space-md);
+    z-index: 2000;
+    background-color: var(--color-bg-card);
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: var(--transition-main);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    border-color: var(--color-magic);
+}
+
+#magic-wand-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-magic);
+}
+
+/* 13. Responsive Breakpoints (Mobile First) */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    
+    .hero-ctas a {
+        display: block;
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    .main-nav {
+        display: none; /* In production, you would need a proper mobile hamburger menu here */
+    }
+
+    .quote-wrapper {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+}

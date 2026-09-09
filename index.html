@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HB Designs Ltd — Embedded Firmware Consulting | Calgary</title>
+<meta name="description" content="Calgary-based embedded firmware and systems consulting. Firmware development, hardware bring-up, field-failure root cause analysis, and legacy firmware recovery. 20+ years hands-on.">
+<link rel="canonical" href="https://hbdesigns.ca/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hbdesigns.ca/">
+<meta property="og:title" content="HB Designs Ltd — Embedded Firmware Consulting">
+<meta property="og:description" content="I help companies debug embedded systems that do not behave the way they should. Firmware, hardware, sensors, controls, and field behaviour.">
+<meta property="og:image" content="https://hbdesigns.ca/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "HB Designs Ltd",
+  "description": "Embedded firmware and systems consulting: firmware development, hardware bring-up, field-failure root cause analysis, legacy firmware recovery.",
+  "url": "https://hbdesigns.ca/",
+  "email": "hello@hbdesigns.ca",
+  "areaServed": "Worldwide",
+  "address": { "@type": "PostalAddress", "addressLocality": "Calgary", "addressRegion": "AB", "addressCountry": "CA" },
+  "knowsAbout": ["Embedded firmware", "C", "C++", "RTOS", "STM32", "ESP32", "nRF52840", "CAN bus", "Hardware bring-up", "Root cause analysis", "Inverter firmware", "Robotics"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <a class="mark" href="#top">
+    <span class="mark-name">HB Designs</span>
+    <span class="mark-sub">Embedded Systems Consulting</span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#call">When to call</a>
+    <a class="nav-cta" href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ── HERO ─────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <p class="eyebrow">Calgary, Alberta · 20+ years hands-on</p>
+    <h1>Embedded firmware consulting for hardware that doesn&rsquo;t behave the way it should.</h1>
+    <p class="lede">I help companies build, debug, stabilize, and recover embedded systems where firmware, electronics, sensors, controls, wireless, and real-world behaviour interact. My strongest value isn&rsquo;t writing C. It&rsquo;s figuring out why real hardware is doing something weird.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#contact">Describe your problem</a>
+      <a class="btn btn-ghost" href="#work">See case studies</a>
+    </div>
+  </div>
+
+  <figure class="scope" aria-label="Logic analyzer capture showing an intermittent fault pulse on channel two">
+    <div class="scope-chrome">
+      <span class="scope-label">CAPTURE 0x2F · 200 MS/s</span>
+      <span class="scope-label scope-label-right">TRIG &nbsp;CH2 ↑</span>
+    </div>
+    <svg class="trace" viewBox="0 0 1200 220" preserveAspectRatio="none" role="img" aria-hidden="true" focusable="false">
+      <g class="grid">
+        <line x1="0" y1="8" x2="1200" y2="8"></line>
+        <line x1="0" y1="212" x2="1200" y2="212"></line>
+      </g>
+      <text class="chan" x="12" y="34">CH0 &nbsp;CLK</text>
+      <path class="wave" d="M 0 74 L 20 74 L 20 42 L 40 42 L 40 74 L 60 74 L 60 42 L 80 42 L 80 74 L 100 74 L 100 42 L 120 42 L 120 74 L 140 74 L 140 42 L 160 42 L 160 74 L 180 74 L 180 42 L 200 42 L 200 74 L 220 74 L 220 42 L 240 42 L 240 74 L 260 74 L 260 42 L 280 42 L 280 74 L 300 74 L 300 42 L 320 42 L 320 74 L 340 74 L 340 42 L 360 42 L 360 74 L 380 74 L 380 42 L 400 42 L 400 74 L 420 74 L 420 42 L 440 42 L 440 74 L 460 74 L 460 42 L 480 42 L 480 74 L 500 74 L 500 42 L 520 42 L 520 74 L 540 74 L 540 42 L 560 42 L 560 74 L 580 74 L 580 42 L 600 42 L 600 74 L 620 74 L 620 42 L 640 42 L 640 74 L 660 74 L 660 42 L 680 42 L 680 74 L 700 74 L 700 42 L 720 42 L 720 74 L 740 74 L 740 42 L 760 42 L 760 74 L 780 74 L 780 42 L 800 42 L 800 74 L 820 74 L 820 42 L 840 42 L 840 74 L 860 74 L 860 42 L 880 42 L 880 74 L 900 74 L 900 42 L 920 42 L 920 74 L 940 74 L 940 42 L 960 42 L 960 74 L 980 74 L 980 42 L 1000 42 L 1000 74 L 1020 74 L 1020 42 L 1040 42 L 1040 74 L 1060 74 L 1060 42 L 1080 42 L 1080 74 L 1100 74 L 1100 42 L 1120 42 L 1120 74 L 1140 74 L 1140 42 L 1160 42 L 1160 74 L 1180 74 L 1180 42 L 1200 42"></path>
+      <text class="chan" x="12" y="94">CH1 &nbsp;DATA</text>
+      <path class="wave" d="M 0 134 L 0 102 L 40 102 L 40 134 L 80 134 L 80 102 L 120 102 L 120 134 L 240 134 L 240 102 L 280 102 L 280 134 L 440 134 L 440 102 L 520 102 L 520 134 L 640 134 L 640 102 L 680 102 L 680 134 L 840 134 L 840 102 L 880 102 L 880 134 L 1040 134 L 1040 102 L 1120 102 L 1120 134 L 1200 134"></path>
+      <text class="chan chan-alert" x="12" y="154">CH2 &nbsp;FAULT</text>
+      <path class="wave wave-alert" d="M 0 194 L 300 194 L 300 162 L 304 162 L 304 194 L 742 194 L 742 162 L 760 162 L 760 194 L 1200 194"></path>
+      <g class="cursor">
+        <line x1="751" y1="8" x2="751" y2="212"></line>
+      </g>
+    </svg>
+    <figcaption>
+      <span class="tag">Intermittent</span>
+      <span>Reproduced on the bench. Measured, not guessed at.</span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ── POSITIONING ──────────────────────────────────── -->
+<section class="band">
+  <div class="wrap statement">
+    <p>Most problems I work on sit between firmware, hardware, sensors, controls, and field behaviour. I&rsquo;m useful when the issue doesn&rsquo;t stay neatly inside one discipline.</p>
+  </div>
+</section>
+
+<!-- ── SERVICES ─────────────────────────────────────── -->
+<section class="wrap section" id="services">
+  <h2 class="h2">Services</h2>
+  <div class="svc-grid">
+
+    <article class="svc">
+      <p class="kicker">Firmware</p>
+      <h3>Embedded firmware development</h3>
+      <p>C/C++ firmware for microcontrollers, RTOS-based systems, bare-metal systems, and embedded Linux-adjacent products. Hardware control, sensor integration, communications, and code that holds up outside the lab.</p>
+      <p class="spec">ARM · STM32 · ESP32 · nRF52840 · PIC · PowerPC · MicroBlaze · 68K derivatives · FreeRTOS · ThreadX · Zephyr · Yocto</p>
+    </article>
+
+    <article class="svc">
+      <p class="kicker">Bring-up</p>
+      <h3>Hardware bring-up &amp; firmware integration</h3>
+      <p>Board bring-up, peripheral drivers, sensor interfaces, and communication buses. I work from the schematic and the scope, not just the datasheet.</p>
+      <p class="spec">SPI · I2C · UART · RS232 · RS485/422 · CAN · Ethernet · GPIO · ADC/DAC · JTAG/SWD · logic analyzers · test fixtures</p>
+    </article>
+
+    <article class="svc svc-feature">
+      <p class="kicker">Root cause</p>
+      <h3>Field-failure root cause analysis</h3>
+      <p>Systems that fail intermittently, or behave differently in the field than on the bench, usually involve more than one discipline at once. I make the problem reproducible, add diagnostics and telemetry where none exist, and separate firmware causes from hardware, mechanical, and environmental ones.</p>
+      <p class="spec">The goal is the actual mechanism &mdash; from logs, lab measurements, and real hardware behaviour.</p>
+    </article>
+
+    <article class="svc">
+      <p class="kicker">Legacy</p>
+      <h3>Legacy firmware recovery</h3>
+      <p>Dead toolchains, missing source, obsolete parts, vanished compiler vendors. I&rsquo;ve restored production firmware for a decades-old platform with none of the original build environment intact. If the product still has to ship, this is familiar ground.</p>
+      <p class="spec">Build environment restoration · source recovery · version control · manufacturing programming flows</p>
+    </article>
+
+    <article class="svc">
+      <p class="kicker">Wireless / IoT</p>
+      <h3>Industrial IoT &amp; wireless devices</h3>
+      <p>Wireless monitoring products, IoT prototypes, vendor SDK integration, and connectivity debugging. I&rsquo;ve carried products through an SDK vendor transition and used diagnostic telemetry to find field failures that weren&rsquo;t visible from the firmware side.</p>
+      <p class="spec">LTE-M · LwM2M · MQTT · Wi-Fi · Bluetooth/BLE · Telit AppZone · Redpine → Silicon Labs</p>
+    </article>
+
+    <article class="svc">
+      <p class="kicker">Power</p>
+      <h3>Power systems / inverter firmware</h3>
+      <p>Certified firmware support for a hybrid inverter product through Schneider Electric: safety-critical firmware, UL1998-related work, HIL testing, generator/inverter synchronization, grid and generator transfer behaviour, and field issue resolution alongside the controls team.</p>
+      <p class="spec">Firmware support, certified releases, validation, and control-system interaction &mdash; through product sunset.</p>
+    </article>
+
+    <article class="svc">
+      <p class="kicker">Robotics</p>
+      <h3>Robotics &amp; real-time systems</h3>
+      <p>Real-time robot control, optical and sensor-based localization correction, Time-of-Flight fault detection, and motion optimization. Most of the hard bugs spanned firmware, controls, sensors, motors, and mechanics together.</p>
+      <p class="spec">Real-time control · fiducial tracking · fault detection · motion profiles · cross-domain debugging</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ── WORK ─────────────────────────────────────────── -->
+<section class="band band-dark section" id="work">
+  <div class="wrap">
+    <h2 class="h2 h2-inv">Selected work</h2>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Inverter&ndash;generator synchronization</h3>
+        <p class="client">Schneider Electric XW Pro · via HB Designs</p>
+      </div>
+      <div class="case-body">
+        <p>A generator-backed hybrid inverter system had a synchronization and control interaction that could go unstable under certain field conditions. I made it repeatable with HIL simulation and physical 20&nbsp;kW generator testing, then worked with the controls team to identify the mechanism and validate the re-tuned controller behaviour. The fix shipped in a certified firmware release.</p>
+        <p class="delta"><span class="delta-label">Generator switchover interruption</span><span class="delta-val">&gt;100 ms <span class="arrow">→</span> &lt;40 ms</span></p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>68K platform brought back into production</h3>
+        <p class="client">OPI Systems</p>
+      </div>
+      <div class="case-body">
+        <p>Flash memory obsolescence forced a firmware change on a legacy 68K product. The development environment was decades old and unsupported, the compiler vendor was gone, and the bootloader source was missing. I rebuilt the toolchain, recovered the bootloader source and put it under version control, and automated manufacturing programming by combining bootloader and application into a single JTAG-programmable artifact.</p>
+        <p class="delta"><span class="delta-label">Production programming time</span><span class="delta-val">10&ndash;15 min <span class="arrow">→</span> &lt;1 min</span></p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Robot localization and motion throughput</h3>
+        <p class="client">ATTAbotics</p>
+      </div>
+      <div class="case-body">
+        <p>Worked on optical localization correction using camera and fiducial tracking, sensor-based correction on legacy robots, Time-of-Flight sensor fault detection, and motion-profile optimization. Extending the useful life of the legacy fleet helped defer roughly $750K in capital expenditure.</p>
+        <p class="delta"><span class="delta-label">Presentation throughput, R&amp;D testing</span><span class="delta-val">&lt;3 <span class="arrow">→</span> 5.5 / min</span></p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Wireless monitoring device field failures</h3>
+        <p class="client">Wireless monitoring product</p>
+      </div>
+      <div class="case-body">
+        <p>Devices were dropping sessions unexpectedly in the field. Working with ST microcontroller firmware and Wi-Fi/Bluetooth module integration &mdash; including a Redpine to Silicon Labs SDK migration &mdash; I added diagnostic telemetry and flags to capture device state ahead of the failures.</p>
+        <p class="delta"><span class="delta-label">Root cause</span><span class="delta-val">Enclosure water intrusion, not firmware</span></p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Wireless heated-clothing controller</h3>
+        <p class="client">Acquired by Gerbing Heated Clothing</p>
+      </div>
+      <div class="case-body">
+        <p>A personal project that turned into a product: bare-metal PIC firmware, custom PCB, and a custom RF protocol on MAX7032 transceivers. The useful lesson was that a radio link needs real framing, timing, and protocol behaviour &mdash; not UART bytes pushed at an antenna. Gerbing reviewed the prototype and acquired the completed design and IP for production.</p>
+        <p class="delta"><span class="delta-label">Scope</span><span class="delta-val">Firmware, hardware, and RF protocol</span></p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ── ABOUT ────────────────────────────────────────── -->
+<section class="wrap section about" id="about">
+  <div class="about-text">
+    <h2 class="h2">About</h2>
+    <p>HB Designs is essentially me. I founded it in 2022 and I do the work myself &mdash; I&rsquo;m not staffing this out or handing it to a junior.</p>
+    <p>Twenty-plus years in embedded systems: microcontrollers, RTOS, bare-metal firmware, and embedded Linux. Along the way that has meant certified inverter firmware, real-time robot control, wireless monitoring devices, applications engineering at Maxim Integrated, and a 68K platform that needed to keep shipping after its original tools disappeared.</p>
+    <p>I like the work that sits between disciplines &mdash; where a bug isn&rsquo;t really a firmware bug or a hardware bug, it&rsquo;s both, plus something environmental nobody accounted for. Writing correct C is table stakes. The harder and more useful skill is working out why real hardware, in the field, is doing something it isn&rsquo;t supposed to do.</p>
+    <p>I work best on real products with real constraints: production schedules, hardware you can&rsquo;t redesign, field data that doesn&rsquo;t fully add up, and someone who needs an answer rather than a theory. I&rsquo;m hands-on and technical, not a management consultant.</p>
+    <p class="credential">B.Eng. Electrical Engineering, Lakehead University · Electronics Engineering Technology diploma, Fanshawe College</p>
+  </div>
+  <aside class="about-side">
+    <h3 class="side-h">Track record</h3>
+    <ul class="hist">
+      <li><span>2022&ndash;</span> Founder &amp; Senior Embedded Systems Consultant, HB Designs</li>
+      <li><span>&mdash;</span> Hybrid inverter firmware support, Schneider Electric</li>
+      <li><span>&mdash;</span> Senior Embedded Developer, OPI Systems</li>
+      <li><span>&mdash;</span> Robotics Developer, ATTAbotics</li>
+      <li><span>&mdash;</span> Embedded Software Developer, Tektelic Communications</li>
+      <li><span>&mdash;</span> Applications Engineer, Maxim Integrated Products</li>
+    </ul>
+  </aside>
+</section>
+
+<!-- ── WHO ──────────────────────────────────────────── -->
+<section class="wrap section" id="who">
+  <h2 class="h2">Who I help</h2>
+  <ul class="who-grid">
+    <li>Hardware startups building a first product</li>
+    <li>Energy technology &mdash; inverters, batteries, grid-edge</li>
+    <li>Industrial IoT companies</li>
+    <li>Robotics companies</li>
+    <li>Wireless device companies</li>
+    <li>Companies with legacy embedded products still in production</li>
+    <li>Teams with field failures they can&rsquo;t reproduce</li>
+    <li>Teams that need senior firmware help before hiring full-time</li>
+  </ul>
+  <p class="who-note">Usually that means a founder, VP Engineering, firmware manager, hardware lead, or a recruiter looking for senior embedded contract support.</p>
+</section>
+
+<!-- ── WHEN TO CALL ─────────────────────────────────── -->
+<section class="band section" id="call">
+  <div class="wrap">
+    <h2 class="h2">When to call</h2>
+    <ul class="symptoms">
+      <li>Your firmware behaves differently in the field than in the lab.</li>
+      <li>Your hardware is built and the firmware is behind.</li>
+      <li>Your team is stuck on an intermittent embedded issue.</li>
+      <li>A legacy product needs to keep shipping, but the tools or the people who built it are gone.</li>
+      <li>A vendor SDK or component change broke something that used to work.</li>
+      <li>You need diagnostics in place before anyone starts guessing at fixes.</li>
+      <li>You need senior embedded help now, and a full-time hire later.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── CAPABILITIES ─────────────────────────────────── -->
+<section class="wrap section" id="capabilities">
+  <h2 class="h2">Capabilities</h2>
+  <dl class="caps">
+    <div><dt>Languages</dt><dd>C · C++ · Python · MATLAB · IEC 61131-3</dd></div>
+    <div><dt>Platforms</dt><dd>ARM · STM32 · ESP32 · nRF52840 · PIC · PowerPC · MicroBlaze · Motorola 68K derivatives</dd></div>
+    <div><dt>Environments</dt><dd>Bare metal · FreeRTOS · ThreadX · Zephyr · embedded Linux · Yocto · Linux · WSL</dd></div>
+    <div><dt>Interfaces</dt><dd>SPI · I2C · UART · RS232 · RS485/422 · CAN · Ethernet · GPIO · ADC/DAC</dd></div>
+    <div><dt>Wireless</dt><dd>LTE-M · LwM2M · MQTT · Wi-Fi · Bluetooth · BLE</dd></div>
+    <div><dt>Tools</dt><dd>Git · Docker · GCC/G++ · VS Code · CLion · PyCharm · JTAG/SWD · oscilloscopes · logic analyzers · HIL simulation</dd></div>
+    <div><dt>Methods</dt><dd>Hardware bring-up · firmware validation · field failure debugging · root-cause analysis · diagnostic telemetry · production programming · manufacturing support · code review · release support · test automation</dd></div>
+  </dl>
+</section>
+
+<!-- ── CONTACT ──────────────────────────────────────── -->
+<section class="band band-dark section" id="contact">
+  <div class="wrap contact">
+    <h2 class="h2 h2-inv">Contact</h2>
+    <p class="contact-lede">Have an embedded system that is stuck, unstable, hard to reproduce, or short on senior firmware help? Let&rsquo;s talk.</p>
+    <p class="contact-hint">A few lines about the hardware, the symptom, and what you&rsquo;ve already tried is enough to start.</p>
+    <div class="contact-links">
+      <a class="btn btn-solid" href="mailto:hello@hbdesigns.ca?subject=Embedded%20firmware%20enquiry">hello@hbdesigns.ca</a>
+      <a class="btn btn-ghost btn-ghost-inv" href="https://www.linkedin.com/">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <span>HB Designs Ltd · Calgary, Alberta</span>
+    <span class="foot-mono">Embedded firmware &amp; systems consulting</span>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
