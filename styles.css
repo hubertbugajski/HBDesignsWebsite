@@ -48,7 +48,10 @@ a{color:inherit}
   backdrop-filter:saturate(140%) blur(8px);
   border-bottom:1px solid rgba(255,255,255,.10);
 }
-.mark{display:flex;flex-direction:column;text-decoration:none;line-height:1.1}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none;line-height:1.1}
+.mark-logo{flex:none;width:52px;height:44px;background:#F1F4F2;
+  -webkit-mask:url(/brand/hb-monogram.svg) center/contain no-repeat;mask:url(/brand/hb-monogram.svg) center/contain no-repeat}
+.mark-text{display:flex;flex-direction:column}
 .mark-name{font-family:var(--f-display);font-weight:800;font-size:19px;letter-spacing:-.02em;color:#F1F4F2}
 .mark-sub{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--trace);margin-top:3px}
 .nav{display:flex;align-items:center;gap:22px;font-family:var(--f-mono);font-size:12.5px;letter-spacing:.04em}
@@ -212,5 +215,6 @@ a{color:inherit}
   body{font-size:16px}
   .nav a:not(.nav-cta){display:none}
   .mark-sub{display:none}
+  .mark-logo{width:40px;height:34px}
   .hero h1{max-width:none}
 }
