@@ -102,6 +102,13 @@
   <div class="svc-grid">
 
     <article class="svc">
+      <p class="kicker">Product development</p>
+      <h3>Concept to working prototype</h3>
+      <p>From an idea to hardware on the bench. I define the architecture, select the microcontroller, radio, sensors, and power components, design the schematic and PCB, write the firmware, and bring the board up into a working prototype in a 3D-printed enclosure. Board and housing are designed and printed in-house, so fit, button placement, and cable routing can be checked and revised the same day. One person owns every layer, so problems that cross between hardware and firmware don&rsquo;t fall through the gap. Regulatory certification can be subcontracted when the product is ready for it.</p>
+      <p class="spec">Requirements · architecture · component selection · schematic capture · PCB layout · KiCad · PADS · firmware · bring-up · 3D-printed enclosures</p>
+    </article>
+
+    <article class="svc">
       <p class="kicker">Firmware</p>
       <h3>Embedded firmware development</h3>
       <p>C/C++ firmware for microcontrollers, RTOS-based systems, bare-metal systems, and embedded Linux-adjacent products. Hardware control, sensor integration, communications, and code that holds up outside the lab.</p>
@@ -112,13 +119,13 @@
       <p class="kicker">Bring-up</p>
       <h3>Hardware bring-up &amp; firmware integration</h3>
       <p>Board bring-up, peripheral drivers, sensor interfaces, and communication buses. I work from the schematic and the scope, not just the datasheet.</p>
-      <p class="spec">SPI · I2C · UART · RS232 · RS485/422 · CAN · Ethernet · GPIO · ADC/DAC · JTAG/SWD · logic analyzers · test fixtures</p>
+      <p class="spec">SPI · I2C · UART · RS232 · RS485/422 · CAN · Ethernet · GPIO · ADC/DAC · JTAG/SWD · logic analyzers · 3D-printed test &amp; programming fixtures</p>
     </article>
 
     <article class="svc">
       <p class="kicker">Root cause</p>
       <h3>Field-failure root cause analysis</h3>
-      <p>Systems that fail intermittently, or behave differently in the field than on the bench, usually involve more than one discipline at once. I make the problem reproducible, add diagnostics and telemetry where none exist, and separate firmware causes from hardware, mechanical, and environmental ones.</p>
+      <p>Systems that fail intermittently, or behave differently in the field than on the bench, usually involve more than one discipline at once. I make the problem reproducible, building bench rigs that recreate the field installation when needed, add diagnostics and telemetry where none exist, and separate firmware causes from hardware, mechanical, and environmental ones.</p>
       <p class="spec">The goal is the actual mechanism &mdash; from logs, lab measurements, and real hardware behaviour.</p>
     </article>
 
@@ -225,7 +232,7 @@
         <p class="client">Acquired by Gerbing Heated Clothing</p>
       </div>
       <div class="case-body">
-        <p>I designed a wireless heated-clothing controller originally for personal use. The system used bare-metal PIC firmware, a custom RF protocol, MAX7032 RF transceivers, and a production-ready PCB implementation. The first attempt was simple: send UART-like data into the radio. That quickly exposed why RF systems need proper framing, timing, preamble behavior, and protocol design.</p>
+        <p>I designed a wireless heated-clothing controller originally for personal use. The system used bare-metal PIC firmware, a custom RF protocol, MAX7032 RF transceivers, and a complete PCB design. The first attempt was simple: send UART-like data into the radio. That quickly exposed why RF systems need proper framing, timing, preamble behavior, and protocol design.</p>
         <p>I implemented the protocol in firmware and validated it against real RF hardware. Gerbing Heated Clothing later reviewed the prototype and acquired the completed design and associated IP for production deployment. This was a complete small embedded product: hardware, firmware, RF communication, PCB implementation, timing constraints, and product handoff.</p>
         <p class="delta"><span class="delta-label">Scope</span><span class="delta-val">Firmware, hardware, and RF protocol</span></p>
       </div>
@@ -298,6 +305,7 @@
     <div><dt>Environments</dt><dd>Bare metal · FreeRTOS · ThreadX · Zephyr · embedded Linux · Yocto · Linux · WSL</dd></div>
     <div><dt>Interfaces</dt><dd>SPI · I2C · UART · RS232 · RS485/422 · CAN · Ethernet · GPIO · ADC/DAC</dd></div>
     <div><dt>Wireless</dt><dd>LTE-M · LwM2M · MQTT · Wi-Fi · Bluetooth · BLE</dd></div>
+    <div><dt>Hardware</dt><dd>Schematic capture · PCB layout · KiCad · PADS · FDM 3D printing · prototype enclosures · test &amp; programming fixtures</dd></div>
     <div><dt>Tools</dt><dd>Git · Docker · GCC/G++ · VS Code · CLion · PyCharm · JTAG/SWD · oscilloscopes · logic analyzers · HIL simulation</dd></div>
     <div><dt>Methods</dt><dd>Hardware bring-up · firmware validation · field failure debugging · root-cause analysis · diagnostic telemetry · production programming · manufacturing support · code review · release support · test automation</dd></div>
   </dl>
