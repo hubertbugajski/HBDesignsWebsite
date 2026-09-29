@@ -1,0 +1,11 @@
+# Files in the repo root that should not be published
+.git
+.gitignore
+.assetsignore
+.wrangler
+node_modules
+wrangler.jsonc
+README.md
+hb_designs.png
+hb_designs_240.png
+style.css

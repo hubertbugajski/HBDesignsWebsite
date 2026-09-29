@@ -6,13 +6,15 @@ Static site. No build step, no dependencies, no framework.
     styles.css    all styling (CSS vars at :root)
     script.js     scroll reveal only; site works fully with JS off
     favicon.svg   scope-trace mark
+    og.png        1200x630 link-preview image
+    brand/        HB logo: hb-logo.svg (full lockup), hb-monogram.svg (header),
+                  hb-logo-1bit.png. SVGs use currentColor; header tints via CSS mask.
     robots.txt / sitemap.xml
 
 ## Before going live
 
 1. `index.html` — replace `hello@hbdesigns.ca` (mailto link + JSON-LD) with your real address.
 2. `index.html` — set the LinkedIn URL, or delete that button.
-3. Optional: add `og.png` (1200x630) at the root for link previews; the meta tag already points at it.
 
 ## Deploy
 
