@@ -52,7 +52,8 @@ a{color:inherit}
 .mark-logo{flex:none;width:52px;height:44px;background:#F1F4F2;
   -webkit-mask:url(/brand/hb-monogram.svg) center/contain no-repeat;mask:url(/brand/hb-monogram.svg) center/contain no-repeat}
 .mark-text{display:flex;flex-direction:column}
-.mark-name{font-family:var(--f-display);font-weight:800;font-size:19px;letter-spacing:-.02em;color:#F1F4F2}
+.mark-name{display:block;width:107px;height:24px;font-size:0;background:#F1F4F2;
+  -webkit-mask:url(/brand/hb-designs-word.svg) left center/contain no-repeat;mask:url(/brand/hb-designs-word.svg) left center/contain no-repeat}
 .mark-sub{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--trace);margin-top:3px}
 .nav{display:flex;align-items:center;gap:22px;font-family:var(--f-mono);font-size:12.5px;letter-spacing:.04em}
 .nav a{color:#C3CFD1;text-decoration:none;padding:4px 0;border-bottom:1px solid transparent}
