@@ -1,0 +1,8 @@
+{
+  "name": "hbdesignswebsite",
+  "compatibility_date": "2026-09-26",
+  // Static site served straight from the repo root; see .assetsignore for exclusions.
+  "assets": {
+    "directory": "."
+  }
+}
