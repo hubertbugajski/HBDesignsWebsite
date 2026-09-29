@@ -236,14 +236,14 @@
 
     <article class="case">
       <div class="case-head">
-        <h3>Closed-loop heated motorcycle jacket control</h3>
+        <h3>Heated-clothing controller, rebuilt on modern hardware</h3>
         <p class="client">In development · independent R&amp;D</p>
       </div>
       <div class="case-body">
-        <p>I am developing a heated motorcycle jacket control system with a wireless handlebar remote, so riders can adjust heat without removing gloves or reaching under their clothing. Most heated-gear controllers apply a fixed power level. This system measures the jacket&rsquo;s actual temperature and adjusts heater output to hold the rider&rsquo;s setpoint as speed, airflow, and weather change.</p>
-        <p>The jacket controller and the remote both run Zephyr RTOS on nRF52840 microcontrollers and communicate over Bluetooth Low Energy. The controller drives two independently regulated heating zones, with battery-voltage monitoring, low-voltage protection, fault detection, and diagnostics. The remote has a colour display, four glove-friendly buttons, and a secondary mode for phone media control. A companion Android app handles configuration, live monitoring, and engineering tools.</p>
-        <p>The core system is working as a proof of concept. Compared with my earlier heated-clothing controller, the problem is the same, but the tools are not: closed-loop control instead of fixed duty cycles, and a standard wireless stack instead of a hand-built RF protocol.</p>
-        <p class="delta"><span class="delta-label">Scope</span><span class="delta-val">2× nRF52840, Zephyr, BLE, Android</span></p>
+        <p>The problem hasn&rsquo;t changed since my first heated-clothing controller: a rider needs to adjust heat from the handlebar without removing gloves or reaching under their clothing. What has changed is the hardware available to solve it. I am rebuilding the system on current parts, with a jacket-mounted controller and a wireless handlebar remote.</p>
+        <p>Where the original used bare-metal PIC firmware and a hand-built RF protocol, both ends now run Zephyr RTOS on nRF52840 microcontrollers and communicate over Bluetooth Low Energy. That headroom goes into the control itself. Instead of applying a fixed power level like conventional heated-gear controllers, the new controller measures the jacket&rsquo;s actual temperature and adjusts heater output to hold the rider&rsquo;s setpoint as speed, airflow, and weather change, across two independently regulated heating zones.</p>
+        <p>The controller adds battery-voltage monitoring, low-voltage protection, fault detection, and diagnostics. The remote has a colour display, four glove-friendly buttons, and a secondary mode for phone media control. A companion Android app handles configuration, live monitoring, and engineering tools. The core system is working as a proof of concept.</p>
+        <p class="delta"><span class="delta-label">Platform</span><span class="delta-val">PIC + custom RF <span class="arrow">→</span> nRF52840 + BLE</span></p>
       </div>
     </article>
 
